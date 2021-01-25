@@ -16,15 +16,16 @@
         <h1>Precio del billete: </h1>
         <% 
         /**
-         * request.getAttribute("calculadora");
-         * El resultado de ${calculadora.op1} ${calculadora.operacion} ${calculadora.op2} es igual a ${calculadora.resultado}
+         * Calculadora cal = (Calculadora) request.getAttribute("calculadora");
+         * Op1:  cal.getOp1() 
+         *Op1:  cal.getOp2()
+         *Operacion:  cal.getOperacion()
+         *Resultado:  cal.getResultado()
         */
-        Calculadora cal = (Calculadora) request.getAttribute("calculadora");
+         request.getAttribute("calculadora");
         %>
-        Op1: <%= cal.getOp1()%> <br>
-        Op1: <%= cal.getOp2()%> <br>
-        Operacion: <%= cal.getOperacion()%> <br>
-        Resultado: <%= cal.getResultado()%> <br>
+
+        El resultado de ${calculadora.op1} ${calculadora.operacion} ${calculadora.op2} es igual a ${calculadora.resultado}<br>
         <a href="index.jsp">Volver al inicio</a>
     </body>
 </html>
